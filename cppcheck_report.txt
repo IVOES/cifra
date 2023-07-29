@@ -1,0 +1,281 @@
+src/arm/boot.c:60:40: error: Subtracting pointers that point to different objects [comparePointers]
+  uint32_t data_bytes = (&__data_end__ - &__data_start__) * 4;
+                                       ^
+src/arm/boot.c:9:33: note: Variable declared here.
+extern uint32_t __data_start__, __data_end__; /* Data addresses in RAM */
+                                ^
+src/arm/boot.c:60:26: note: Address of variable taken here.
+  uint32_t data_bytes = (&__data_end__ - &__data_start__) * 4;
+                         ^
+src/arm/boot.c:9:17: note: Variable declared here.
+extern uint32_t __data_start__, __data_end__; /* Data addresses in RAM */
+                ^
+src/arm/boot.c:60:42: note: Address of variable taken here.
+  uint32_t data_bytes = (&__data_end__ - &__data_start__) * 4;
+                                         ^
+src/arm/boot.c:60:40: note: Subtracting pointers that point to different objects
+  uint32_t data_bytes = (&__data_end__ - &__data_start__) * 4;
+                                       ^
+src/arm/boot.c:64:38: error: Subtracting pointers that point to different objects [comparePointers]
+  uint32_t bss_bytes = (&__bss_end__ - &__bss_start__) * 4;
+                                     ^
+src/arm/boot.c:10:32: note: Variable declared here.
+extern uint32_t __bss_start__, __bss_end__; /* BSS addresses in RAM */
+                               ^
+src/arm/boot.c:64:25: note: Address of variable taken here.
+  uint32_t bss_bytes = (&__bss_end__ - &__bss_start__) * 4;
+                        ^
+src/arm/boot.c:10:17: note: Variable declared here.
+extern uint32_t __bss_start__, __bss_end__; /* BSS addresses in RAM */
+                ^
+src/arm/boot.c:64:40: note: Address of variable taken here.
+  uint32_t bss_bytes = (&__bss_end__ - &__bss_start__) * 4;
+                                       ^
+src/arm/boot.c:64:38: note: Subtracting pointers that point to different objects
+  uint32_t bss_bytes = (&__bss_end__ - &__bss_start__) * 4;
+                                     ^
+src/arm/main.c:404:0: information: Skipping configuration 'TEST' since the value of 'TEST' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  emit(STRING(TEST) "\n");
+^
+src/arm/main.c:414:0: information: Skipping configuration 'TEST' since the value of 'TEST' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  measure(TEST);
+^
+src/arm/semihost.c:120:27: style:inconclusive: Function 'emit_uint32' argument 1 names different: declaration 'v' definition 'x'. [funcArgNamesDifferent]
+void emit_uint32(uint32_t x)
+                          ^
+src/arm/semihost.h:31:27: note: Function 'emit_uint32' argument 1 names different: declaration 'v' definition 'x'.
+void emit_uint32(uint32_t v);
+                          ^
+src/arm/semihost.c:120:27: note: Function 'emit_uint32' argument 1 names different: declaration 'v' definition 'x'.
+void emit_uint32(uint32_t x)
+                          ^
+src/blockwise.c:23:42: style:inconclusive: Function 'cf_blockwise_accumulate' argument 4 names different: declaration 'input' definition 'inp'. [funcArgNamesDifferent]
+                             const void *inp, size_t nbytes,
+                                         ^
+src/blockwise.h:43:42: note: Function 'cf_blockwise_accumulate' argument 4 names different: declaration 'input' definition 'inp'.
+                             const void *input, size_t nbytes,
+                                         ^
+src/blockwise.c:23:42: note: Function 'cf_blockwise_accumulate' argument 4 names different: declaration 'input' definition 'inp'.
+                             const void *inp, size_t nbytes,
+                                         ^
+src/blockwise.c:33:48: style:inconclusive: Function 'cf_blockwise_accumulate_final' argument 4 names different: declaration 'input' definition 'inp'. [funcArgNamesDifferent]
+                                   const void *inp, size_t nbytes,
+                                               ^
+src/blockwise.h:67:48: note: Function 'cf_blockwise_accumulate_final' argument 4 names different: declaration 'input' definition 'inp'.
+                                   const void *input, size_t nbytes,
+                                               ^
+src/blockwise.c:33:48: note: Function 'cf_blockwise_accumulate_final' argument 4 names different: declaration 'input' definition 'inp'.
+                                   const void *inp, size_t nbytes,
+                                               ^
+src/blockwise.c:101:35: style:inconclusive: Function 'cf_blockwise_xor' argument 4 names different: declaration 'input' definition 'inp'. [funcArgNamesDifferent]
+                      const void *inp, void *outp, size_t nbytes,
+                                  ^
+src/blockwise.h:91:35: note: Function 'cf_blockwise_xor' argument 4 names different: declaration 'input' definition 'inp'.
+                      const void *input, void *output, size_t nbytes,
+                                  ^
+src/blockwise.c:101:35: note: Function 'cf_blockwise_xor' argument 4 names different: declaration 'input' definition 'inp'.
+                      const void *inp, void *outp, size_t nbytes,
+                                  ^
+src/blockwise.c:101:46: style:inconclusive: Function 'cf_blockwise_xor' argument 5 names different: declaration 'output' definition 'outp'. [funcArgNamesDifferent]
+                      const void *inp, void *outp, size_t nbytes,
+                                             ^
+src/blockwise.h:91:48: note: Function 'cf_blockwise_xor' argument 5 names different: declaration 'output' definition 'outp'.
+                      const void *input, void *output, size_t nbytes,
+                                               ^
+src/blockwise.c:101:46: note: Function 'cf_blockwise_xor' argument 5 names different: declaration 'output' definition 'outp'.
+                      const void *inp, void *outp, size_t nbytes,
+                                             ^
+src/cbcmac.c:48:81: style:inconclusive: Function 'cf_cbcmac_stream_update' argument 3 names different: declaration 'ndata' definition 'len'. [funcArgNamesDifferent]
+void cf_cbcmac_stream_update(cf_cbcmac_stream *ctx, const uint8_t *data, size_t len)
+                                                                                ^
+src/modes.h:195:81: note: Function 'cf_cbcmac_stream_update' argument 3 names different: declaration 'ndata' definition 'len'.
+void cf_cbcmac_stream_update(cf_cbcmac_stream *ctx, const uint8_t *data, size_t ndata);
+                                                                                ^
+src/cbcmac.c:48:81: note: Function 'cf_cbcmac_stream_update' argument 3 names different: declaration 'ndata' definition 'len'.
+void cf_cbcmac_stream_update(cf_cbcmac_stream *ctx, const uint8_t *data, size_t len)
+                                                                                ^
+src/chacha20.c:154:93: style:inconclusive: Function 'cf_chacha20_cipher' argument 4 names different: declaration 'count' definition 'bytes'. [funcArgNamesDifferent]
+void cf_chacha20_cipher(cf_chacha20_ctx *ctx, const uint8_t *input, uint8_t *output, size_t bytes)
+                                                                                            ^
+src/salsa20.h:138:93: note: Function 'cf_chacha20_cipher' argument 4 names different: declaration 'count' definition 'bytes'.
+void cf_chacha20_cipher(cf_chacha20_ctx *ctx, const uint8_t *input, uint8_t *output, size_t count);
+                                                                                            ^
+src/chacha20.c:154:93: note: Function 'cf_chacha20_cipher' argument 4 names different: declaration 'count' definition 'bytes'.
+void cf_chacha20_cipher(cf_chacha20_ctx *ctx, const uint8_t *input, uint8_t *output, size_t bytes)
+                                                                                            ^
+src/cmac.c:50:61: style:inconclusive: Function 'cf_cmac_sign' argument 3 names different: declaration 'bytes' definition 'len'. [funcArgNamesDifferent]
+void cf_cmac_sign(cf_cmac *ctx, const uint8_t *data, size_t len, uint8_t out[CF_MAXBLOCK])
+                                                            ^
+src/modes.h:260:61: note: Function 'cf_cmac_sign' argument 3 names different: declaration 'bytes' definition 'len'.
+void cf_cmac_sign(cf_cmac *ctx, const uint8_t *data, size_t bytes,
+                                                            ^
+src/cmac.c:50:61: note: Function 'cf_cmac_sign' argument 3 names different: declaration 'bytes' definition 'len'.
+void cf_cmac_sign(cf_cmac *ctx, const uint8_t *data, size_t len, uint8_t out[CF_MAXBLOCK])
+                                                            ^
+src/cmac.c:108:77: style:inconclusive: Function 'cf_cmac_stream_update' argument 3 names different: declaration 'ndata' definition 'len'. [funcArgNamesDifferent]
+void cf_cmac_stream_update(cf_cmac_stream *ctx, const uint8_t *data, size_t len, int isfinal)
+                                                                            ^
+src/modes.h:312:77: note: Function 'cf_cmac_stream_update' argument 3 names different: declaration 'ndata' definition 'len'.
+void cf_cmac_stream_update(cf_cmac_stream *ctx, const uint8_t *data, size_t ndata,
+                                                                            ^
+src/cmac.c:108:77: note: Function 'cf_cmac_stream_update' argument 3 names different: declaration 'ndata' definition 'len'.
+void cf_cmac_stream_update(cf_cmac_stream *ctx, const uint8_t *data, size_t len, int isfinal)
+                                                                            ^
+src/curve25519.tweetnacl.c:47:11: style: The scope of the variable 'c' can be reduced. [variableScope]
+  int64_t c;
+          ^
+src/curve25519.tweetnacl.c:60:11: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+  int64_t tmp, mask = ~(b-1);
+          ^
+src/curve25519.tweetnacl.c:71:7: style: The scope of the variable 'b' can be reduced. [variableScope]
+  int b;
+      ^
+src/curve25519.donna.c:490:19: style: Local variable 'mask' shadows outer variable [shadowVariable]
+        const s32 mask = input[i] >> 31;
+                  ^
+src/curve25519.donna.c:478:7: note: Shadowed declaration
+  s32 mask;
+      ^
+src/curve25519.donna.c:490:19: note: Shadow variable
+        const s32 mask = input[i] >> 31;
+                  ^
+src/curve25519.donna.c:495:19: style: Local variable 'mask' shadows outer variable [shadowVariable]
+        const s32 mask = input[i] >> 31;
+                  ^
+src/curve25519.donna.c:478:7: note: Shadowed declaration
+  s32 mask;
+      ^
+src/curve25519.donna.c:495:19: note: Shadow variable
+        const s32 mask = input[i] >> 31;
+                  ^
+src/curve25519.donna.c:505:17: style: Local variable 'mask' shadows outer variable [shadowVariable]
+      const s32 mask = input[9] >> 31;
+                ^
+src/curve25519.donna.c:478:7: note: Shadowed declaration
+  s32 mask;
+      ^
+src/curve25519.donna.c:505:17: note: Shadow variable
+      const s32 mask = input[9] >> 31;
+                ^
+src/curve25519.donna.c:529:15: style: Local variable 'mask' shadows outer variable [shadowVariable]
+    const s32 mask = input[0] >> 31;
+              ^
+src/curve25519.donna.c:478:7: note: Shadowed declaration
+  s32 mask;
+      ^
+src/curve25519.donna.c:529:15: note: Shadow variable
+    const s32 mask = input[0] >> 31;
+              ^
+src/curve25519.donna.c:255:45: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  const int32_t sign = ((int32_t) highword) >> 31;
+                                            ^
+src/curve25519.donna.c:271:45: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  const int32_t sign = ((int32_t) highword) >> 31;
+                                            ^
+src/curve25519.donna.c:458:12: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  return a >> 31;
+           ^
+src/curve25519.donna.c:466:14: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  return ~(a >> 31);
+             ^
+src/curve25519.donna.c:490:35: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        const s32 mask = input[i] >> 31;
+                                  ^
+src/curve25519.donna.c:495:35: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        const s32 mask = input[i] >> 31;
+                                  ^
+src/curve25519.donna.c:505:33: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+      const s32 mask = input[9] >> 31;
+                                ^
+src/curve25519.donna.c:529:31: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    const s32 mask = input[0] >> 31;
+                              ^
+src/curve25519.naclref.c:64:16: style: The scope of the variable 'u' can be reduced. [variableScope]
+  unsigned int u;
+               ^
+src/curve25519.naclref.c:92:16: style: The scope of the variable 'u' can be reduced. [variableScope]
+  unsigned int u;
+               ^
+src/curve25519.naclref.c:111:16: style: The scope of the variable 't' can be reduced. [variableScope]
+  unsigned int t;
+               ^
+src/curve25519.naclref.c:140:16: style: The scope of the variable 'b' can be reduced. [variableScope]
+  unsigned int b;
+               ^
+src/ocb.c:244:9: style: Variable 'plain' is assigned a value that is never used. [unreadVariable]
+  plain += (o.out - cipher);
+        ^
+src/poly1305.c:184:40: style:inconclusive: Function 'cf_poly1305_update' argument 2 names different: declaration 'data' definition 'buf'. [funcArgNamesDifferent]
+                        const uint8_t *buf,
+                                       ^
+src/poly1305.h:80:40: note: Function 'cf_poly1305_update' argument 2 names different: declaration 'data' definition 'buf'.
+                        const uint8_t *data,
+                                       ^
+src/poly1305.c:184:40: note: Function 'cf_poly1305_update' argument 2 names different: declaration 'data' definition 'buf'.
+                        const uint8_t *buf,
+                                       ^
+src/salsa20.c:158:91: style:inconclusive: Function 'cf_salsa20_cipher' argument 4 names different: declaration 'count' definition 'bytes'. [funcArgNamesDifferent]
+void cf_salsa20_cipher(cf_salsa20_ctx *ctx, const uint8_t *input, uint8_t *output, size_t bytes)
+                                                                                          ^
+src/salsa20.h:129:91: note: Function 'cf_salsa20_cipher' argument 4 names different: declaration 'count' definition 'bytes'.
+void cf_salsa20_cipher(cf_salsa20_ctx *ctx, const uint8_t *input, uint8_t *output, size_t count);
+                                                                                          ^
+src/salsa20.c:158:91: note: Function 'cf_salsa20_cipher' argument 4 names different: declaration 'count' definition 'bytes'.
+void cf_salsa20_cipher(cf_salsa20_ctx *ctx, const uint8_t *input, uint8_t *output, size_t bytes)
+                                                                                          ^
+src/testaes.c:224:8: style: Redundant initialization for 'nkey'. The initialized value is overwritten before it is read. [redundantInitialization]
+  nkey = unhex(keybuf, 32, key);
+       ^
+src/testaes.c:221:15: note: nkey is initialized
+  size_t nkey = sizeof keybuf;
+              ^
+src/testaes.c:224:8: note: nkey is overwritten
+  nkey = unhex(keybuf, 32, key);
+       ^
+src/testaes.c:59:18: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    tab32[i] = 1 << i;
+                 ^
+src/testaes.c:59:18: error: Signed integer overflow for expression '1<<i'. [integerOverflow]
+    tab32[i] = 1 << i;
+                 ^
+src/testmodes.c:154:15: style: Same expression on both sides of '<='. [duplicateExpression]
+  assert(ntag <= ntag);
+              ^
+src/testmodes.c:112:27: portability: 'inp' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+  cf_ctr_cipher(&ctr, inp + 1, out + 1, 15);
+                          ^
+src/arm/boot.c:72:0: style: The function '__assert_func' is never used. [unusedFunction]
+
+^
+src/arm/semihost.c:105:0: style: The function 'emit_hex' is never used. [unusedFunction]
+
+^
+src/arm/semihost.c:60:0: style: The function 'emitf' is never used. [unusedFunction]
+
+^
+src/arm/semihost.c:166:0: style: The function 'get_cycles' is never used. [unusedFunction]
+
+^
+src/arm/boot.c:105:0: style: The function 'memmove' is never used. [unusedFunction]
+
+^
+src/arm/semihost.c:24:0: style: The function 'quit_failure' is never used. [unusedFunction]
+
+^
+src/arm/semihost.c:16:0: style: The function 'quit_success' is never used. [unusedFunction]
+
+^
+src/arm/semihost.c:157:0: style: The function 'reset_cycles' is never used. [unusedFunction]
+
+^
+src/aes.c:72:0: style: The function 'rot_word' is never used. [unusedFunction]
+
+^
+src/aes.c:67:0: style: The function 'round_constant' is never used. [unusedFunction]
+
+^
+src/aes.c:54:0: style: The function 'word4' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
